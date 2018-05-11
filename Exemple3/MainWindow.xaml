@@ -1,0 +1,57 @@
+﻿<Window x:Class="Exemple3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exemple3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="525">
+    <Canvas Margin="5">
+        <!-- Path1 animation: -->
+        <Path Stroke="LightBlue">
+            <Path.Data>
+                <PathGeometry x:Name="path1"
+Figures="M50,120 C75,20 175,20 200,120 220,220 325,220 350,
+120 325,20 220,20 200,120 175,220 75,220 50,120"/>
+            </Path.Data>
+        </Path>
+        <Path Stroke="DarkGoldenrod">
+            <Path.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="Gold" Offset="0"/>
+                    <GradientStop Color="DarkGoldenrod"
+Offset="1"/>
+                </RadialGradientBrush>
+            </Path.Fill>
+            <Path.Data>
+                <EllipseGeometry x:Name="circle1"
+Center="50,120" RadiusX="10"
+RadiusY="10"/>
+            </Path.Data>
+        </Path>
+        <!-- Path2 Animation: -->
+        <Polyline Points="0,345,96,345,320,432,500,432"
+Stroke="Gray" StrokeThickness="5"/>
+        <Path>
+            <Path.Data>
+                <PathGeometry x:Name="path2"
+Figures="M0,292 L75,292 300,380,449,380"/>
+            </Path.Data>
+        </Path>
+        <Ellipse Name="circle2" Stroke="DarkGoldenrod"
+Canvas.Left="0" Canvas.Top="293"
+Width="50" Height="50">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="DarkGoldenrod"
+Offset="0.5"/>
+                    <GradientStop Color="Gold" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <RotateTransform x:Name="circle2Rotate"
+CenterX="25" CenterY="25"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+    </Canvas>
+</Window>
